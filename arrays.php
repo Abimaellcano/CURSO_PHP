@@ -17,9 +17,45 @@ Tipos de Arrays
 
 - ESCALARES: Los arrays escalares son aquellos en los que para acceder a los elementos utilizamos un índice que representa la posiciónn del valor dentro del array comenzando desde el índice 0
 
-ASOCIATIVOS: Para acceder a los elementos del array utilizacmos la clave asociada con el elemento, donde este toma un cierto número de parejas utilizando la sintaxis clave => valor como argumentos.
+- ASOCIATIVOS: Para acceder a los elementos del array utilizacmos la clave asociada con el elemento, donde este toma un cierto número de parejas utilizando la sintaxis clave => valor como argumentos.
 
-MULTIDIMENCIONALES: Un array multidimencional es aquel cuyos valores son otros arrays. Para acceder a sus elementos se tienen que indicar los índices de cada una de sus dimensiones, utilizando tantos pares de corchetes [array][array][array] como dimensiones se definan en el array: [] [] -> 2 dimensiones, [][][] -> 3 dimensiones, etc ....
+- MULTIDIMENCIONALES: Un array multidimencional es aquel cuyos valores son otros arrays. Para acceder a sus elementos se tienen que indicar los índices de cada una de sus dimensiones, utilizando tantos pares de corchetes [array][array][array] como dimensiones se definan en el array: [] [] -> 2 dimensiones, [][][] -> 3 dimensiones, etc ....
+
+Asignar Valores
+Para asignar valores a los elementos de un array, utilizaremos la sintaxis:
+$NombreArray[IndiceClave]= Valor Asignado ;
+
+Ejemplos:
+$elementos[11]=50;
+$elementos['Precio']=9.99
+
+PHP Admite tambien otra posibilidad que no admiten otros lenguajes: Se pueden asignar valores a un array sin especificar el índice, ya que PHP los coloca automáticamente al final de los elementos existentes.
+$NombreArray[]=valorAsignado;
+
+Ejemplos:
+$elementos[]=100.25;
+$elementos[]=50;
+
+Contar los elementos de un array: count()
+<?php
+$numeros=[10,20,30,40];
+echo count($numeros); //4 ?>
+
+Si deseamos contar todos los elementos de un array multidimensional, tendremos que indicar la constante COUNT_RECURSIVE como segundo argumento de la función count().
+<? php
+$matriz_nummeros=[[2,4,6,8],[5,10,15,20],[10,20,30,40]]; //15 (ya que se tienen en cuenta los 3 elementos de la primera dimensión)
+echo count($matriz_numeros, COUNT_RECURSIVE);?>
+
+
+
+
+
+
+
+
+
+
+
 https://www.youtube.com/watch?v=VOGeWOKAnE4
 */
 
@@ -31,7 +67,7 @@ $estudiantes[3]="Claudia";
 
 // echo $estudiantes[" "];
 
-//Array Asociativo:
+//Array Asociativo =>:
 
 $tutor=[
     "nombre"=>"Carlos",
@@ -48,5 +84,13 @@ $tutor_2=[
     "edad"=>"20",
     "cursos"=>["PHP","Python","CSS"]
 ];
-$tutor_2["pais"]= "El Salvador";
-echo $tutor_2["pais"];
+// $tutor_2["pais"]= "El Salvador";
+// echo $tutor_2["pais"];
+
+// echo $tutor_2["cursos"][0];
+
+//contar estudiantes
+// echo count($estudiantes);
+
+
+echo count($tutor_2,COUNT_RECURSIVE);
