@@ -1,5 +1,34 @@
-/* 
-Operadores Aritmétios:
+<?php 
+$numero_1=10;
+$numero_2=3;
+
+// echo $numero_1+$numero_2;
+// $resultado=$numero_1+10;
+// echo $resultado;
+
+// $resultado=$numero_2-$numero_1;
+// echo $resultado;
+
+// $resultado=$numero_2/$numero_1;
+// echo $resultado;
+
+// $resultado= $numero_2 * $numero_1;
+// echo $resultado;
+
+// $resultado= $numero_2 ** $numero_1;
+// echo $resultado;
+
+$resultado= $numero_1 % $numero_2;
+echo $resultado;
+
+
+?>
+
+
+
+
+<!-- Operadores Aritmétios:
+https://www.youtube.com/watch?v=eQS9qYtNl_U
 
 Nombre                          Símbolo en PHP
 Suma                                 +
@@ -25,4 +54,5 @@ Cuando dos operadores tienen el mismo nivel de prioridad, dentro de una expresi�
 
 
 
-*/
+
+ -->
